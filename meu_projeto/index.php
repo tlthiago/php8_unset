@@ -7,10 +7,12 @@ include_once 'helpers.php';
 
 $texto = 'Texto para resumir';
 
-echo $total = mb_strlen(trim($texto));
-echo '<hr>';
+// echo $total = mb_strlen(trim($texto));
+// echo '<hr>';
 
-echo $resumo = mb_substr($texto, 1, 3);
-echo '<hr>';
+// echo $resumo = mb_substr($texto, 1, 3);
+// echo '<hr>';
 
-echo $ocorrencia = mb_
+// echo $ocorrencia = mb_strrpos($texto, 'o');
+
+echo resumirTexto($texto, 15);

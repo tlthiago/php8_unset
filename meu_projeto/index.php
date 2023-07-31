@@ -5,7 +5,8 @@
 require_once 'sistema/configuracao.php';
 include_once 'helpers.php';
 
-$texto = 'Texto para resumir';
+// $texto = '<h1>Texto</h1> <p>para</p> resumir';
+// $texto = strip_tags($texto);
 
 // echo $total = mb_strlen(trim($texto));
 // echo '<hr>';
@@ -15,4 +16,18 @@ $texto = 'Texto para resumir';
 
 // echo $ocorrencia = mb_strrpos($texto, 'o');
 
-echo resumirTexto($texto, 15);
+// echo resumirTexto($texto, 15);
+
+// $valor = 5;
+
+// // if ($valor) {
+// //     echo $valor;
+// // } else {
+// //     echo 0;
+// // }
+
+// echo ($valor ? $valor : 0);
+// echo ($valor ?  : 0);
+
+echo formatarValor();
+echo formatarNumero('100');

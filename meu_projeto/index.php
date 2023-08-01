@@ -20,14 +20,29 @@ include_once 'helpers.php';
 
 // $valor = 5;
 
-// // if ($valor) {
-// //     echo $valor;
-// // } else {
-// //     echo 0;
-// // }
+// if ($valor) {
+//     echo $valor;
+// } else {
+//     echo 0;
+// }
 
 // echo ($valor ? $valor : 0);
 // echo ($valor ?  : 0);
 
-echo formatarValor();
-echo formatarNumero('100');
+// echo formatarValor();
+// echo formatarNumero('100');
+
+// $data = date('d/m/Y H:i:s');
+// echo $data;
+
+// echo contarTempo('2023-07-22 12:26:14');
+
+if (validarEmail('teste@martminas.com.br')) {
+    echo 'Endereço de e-mail válido!';
+} else {
+    echo 'Endereço de e-mail inválido!';
+}
+
+var_dump(validarUrl('https://teste.com'));
+
+// var_dump(validarEmail('teste@gmail.com'));

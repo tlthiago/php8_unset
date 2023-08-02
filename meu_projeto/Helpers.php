@@ -1,9 +1,101 @@
 <?php
 
+function dataAtual(): string {
+    $diaMes = date('d');
+    $diaSemana = date('w');
+    $mes = date('n') - 1;
+    $ano = date('Y');
+
+    $nomesDiasDaSemana = [
+        'Domingo', 
+        'Segunda-feira', 
+        'Terça-feira', 
+        'Quarta-feira', 
+        'Quinta-feira', 
+        'Sexta-feira', 
+        'Sábado'
+    ];
+
+    $nomesDosMeses = [
+        'Janeiro',
+        'Fevereiro',
+        'Março',
+        'Abril',
+        'Maio',
+        'Junho',
+        'Julho',
+        'Agosto',
+        'Setembro',
+        'Outubro',
+        'Novembro',
+        'Dezembro'
+    ];
+
+    $dataFormatada = $nomesDiasDaSemana[$diaSemana] . ', ' . $diaMes . ' de ' . $nomesDosMeses[$mes] . ' de ' . $ano;
+
+    return $dataFormatada;
+}
+
+/**
+ * Monta url de acordo com o ambiente
+ * @param string $url parte da url ex. admin
+ * @return string url completa
+ */
+function url(string $url): string {
+    $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
+    $ambiente = ($servidor == 'localhost' ? URL_DESENVOLVIMENTO : URL_PRODUCAO);
+    
+    if(str_starts_with($url, '/')) {
+        return $ambiente.$url;
+    }
+    
+    return $ambiente.'/'.$url;
+}
+
+function localhost(): bool {
+    $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME', FILTER_DEFAULT);
+    if ($servidor == 'localhost') {
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Valida uma url
+ * @param string $url
+ * @return bool
+ */
 function validarUrl(string $url): bool {
     return filter_var($url, FILTER_VALIDATE_URL);
 }
 
+/**
+ * Valida uma url
+ * @param string $url
+ * @return bool
+ */
+function validarUrlComFiltro(string $url): bool {
+    if (mb_strlen($url) < 10) {
+        return false;
+    }
+
+    if (!str_contains($url, '.')) {
+        return false;
+    }
+
+    if(str_contains($url, 'http://') || str_contains($url, 'https://')) {
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Valida um endereço de e-mail
+ * @param string $email
+ * @return bool
+ */
 function validarEmail(string $email): bool
 {
     return filter_var($email, FILTER_VALIDATE_EMAIL);
@@ -73,15 +165,39 @@ function saudacao(): string
 {
     $hora = date('H');
 
-    if ($hora >= 0 && $hora <= 5) {
-        $saudacao = 'Boa madrugada';
-    } else if ($hora >= 6 && $hora <= 12) {
-        $saudacao = 'Bom dia';
-    } else if ($hora >= 13 && $hora <= 18) {
-        $saudacao = 'Boa tarde';
-    } else {
-        $saudacao = 'Boa noite';
-    }
+    // IF / ELSE
+    // if ($hora >= 0 && $hora <= 5) {
+    //     $saudacao = 'Boa madrugada.';
+    // } else if ($hora >= 6 && $hora <= 12) {
+    //     $saudacao = 'Bom dia.';
+    // } else if ($hora >= 13 && $hora <= 18) {
+    //     $saudacao = 'Boa tarde.';
+    // } else {
+    //     $saudacao = 'Boa noite.';
+    // }
+
+    // SWITCH
+    // switch ($hora) {
+    //     case $hora >= 0 && $hora <= 5:
+    //         $saudacao = 'Boa madrugada.';
+    //         break;
+    //     case $hora >= 6 && $hora <= 12:
+    //         $saudacao = 'Bom dia.';
+    //         break;
+    //     case $hora >= 13 && $hora <= 18:
+    //         $saudacao = 'Boa tarde.';
+    //         break;
+    //     default:
+    //         $saudacao = 'Boa noite.';
+    // }
+
+    // MATCH
+    $saudacao = match(true) {
+        $hora >= 0 && $hora <= 5 => 'Boa madrugada.',
+        $hora >= 6 && $hora <= 12 => 'Bom dia.',
+        $hora >= 13 && $hora <= 18 => 'Boa tarde.',
+        default => 'Boa noite.'
+    };
 
     return $saudacao;
 }

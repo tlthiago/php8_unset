@@ -37,12 +37,62 @@ include_once 'helpers.php';
 
 // echo contarTempo('2023-07-22 12:26:14');
 
-if (validarEmail('teste@martminas.com.br')) {
-    echo 'Endereço de e-mail válido!';
-} else {
-    echo 'Endereço de e-mail inválido!';
+// if (validarEmail('teste@martminas.com.br')) {
+//     echo 'Endereço de e-mail válido!';
+// } else {
+//     echo 'Endereço de e-mail inválido!';
+// }
+
+// var_dump(validarUrl('https://teste.com'));
+
+// $url = 'http://unset.com';
+// var_dump(validarUrl($url));
+// echo '<hr>';
+// var_dump(validarUrlComFiltro($url));
+
+// var_dump(localhost());
+// echo '<hr>';
+// echo url('admin');
+// echo '<hr>';
+// var_dump($_SERVER);
+
+// $meses = array();
+// $meses = [
+//     'Janeiro', 
+//     'Fevereiro', 
+//     'Março'
+// ];
+
+// foreach ($meses as $chave => $valor) {
+//     echo $chave . ' - ' . $valor . '<br>';
+// }
+// echo '<hr>';
+
+// echo $meses[2];
+
+// echo '<hr>';
+// var_dump($meses);
+// echo '<hr>';
+
+// echo $_SERVER['SCRIPT_FILENAME'];
+// echo '<hr>';
+
+// var_dump($_SERVER);
+
+// echo saudacao().' Hoje é '.dataAtual();
+
+// echo slug("Adão \"Negro\" - '2022'").'<hr>';
+// echo slug("Avatar 2: O Caminho da Água").'<hr>';
+// echo slug("Não! Não Olhe!").'<hr>';
+// echo slug("Sonic 2 - O Filme").'<hr>';
+// echo slug("NOVA SÉRIE NO DISNEY+!").'<hr>';
+// echo slug("100 Melhores filmes").'<hr>';
+// echo slug("teste!@###$%6¨%%¨,*.:/?\|,").'<hr>';
+
+// echo saudacao();
+
+$numero = 1;
+
+while ($numero < 10) {
+    echo $numero++;    
 }
-
-var_dump(validarUrl('https://teste.com'));
-
-// var_dump(validarEmail('teste@gmail.com'));

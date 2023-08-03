@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Válida um número de CPF
+ * @param string $cpf
+ * @return bool
+ */
 function validarCpf(string $cpf): bool {
     $cpf = limparNumero($cpf);
     if (mb_strlen($cpf) != 11 || preg_match('/(\d)1{10}/', $cpf)) {
@@ -21,6 +26,11 @@ function validarCpf(string $cpf): bool {
     return true;
 }
 
+/**
+ * Limpa a string recebida retornando apenas os números
+ * @param string $numero
+ * @return string
+ */
 function limparNumero(string $numero): string {
     return preg_replace('/[^0-9]/', '', $numero);
 }

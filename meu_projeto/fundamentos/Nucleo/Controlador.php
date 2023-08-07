@@ -2,8 +2,12 @@
 
 namespace fundamentos\Nucleo;
 
+use fundamentos\Support\Template;
+
 class Controlador {
-    public function __construct(string $tema = null) {
-        echo $tema;
+    protected Template $template;
+
+    public function __construct(string $directory) {
+        $this->template = new Template($directory);
     }
 }

@@ -4,11 +4,10 @@
 
 include './Nucleo/Mensagem.php';
 
-$msg = new Mensagem();
-echo $msg->sucesso('Mensagem de sucesso')->renderizar();
-echo $msg->erro('Mensagem de erro')->renderizar();
-echo $msg->alerta('Mensagem de alerta')->renderizar();
-echo $msg->informa('Mensagem de informações')->renderizar();
-echo '<hr>';
+echo (new Mensagem())->alerta('Texto de alerta');
 
-var_dump($msg);
+// $msg = new Mensagem();
+// echo $msg->sucesso('Mensagem de sucesso')->renderizar();
+
+// echo (new Mensagem())->erro('Mensagem de erro')->renderizar();
+echo '<hr>';

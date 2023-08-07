@@ -15,5 +15,8 @@
             "name": "Thiago Alves"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "pecee/simple-router": "dev-master"
+    }
 }

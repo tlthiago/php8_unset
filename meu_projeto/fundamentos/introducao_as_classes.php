@@ -1,15 +1,14 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
 <?php
 
 use fundamentos\Nucleo\Mensagem;
-
 include './Nucleo/Mensagem.php';
 
-echo (new Mensagem)->alerta('Texto de alerta');
+use fundamentos\Nucleo\Helpers;
+include_once '../fundamentos/Nucleo/Helpers.php';
 
-// $msg = new Mensagem();
-// echo $msg->sucesso('Mensagem de sucesso')->renderizar();
+// echo (new Mensagem)->alerta('Texto de alerta');
 
-// echo (new Mensagem())->erro('Mensagem de erro')->renderizar();
+// echo Helpers::limparNumero('12345dd67');
+echo Helpers::saudacao();
+
 echo '<hr>';

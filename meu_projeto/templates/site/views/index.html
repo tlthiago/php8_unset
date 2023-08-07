@@ -6,10 +6,14 @@
     <title>Página inicial</title>
 </head>
 <body>
+    {% include 'top.html' %}
+
     <h1>{{ titulo }}</h1>
     <p>{{ subtitulo }}</p>
     <p>{{ url() }}</p>
     <p>{{ saudacao() }}</p>
     <p>{{ resumirTexto(titulo, 5) }}</p>
+
+    {% include 'footer.html' %}
 </body>
 </html>

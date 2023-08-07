@@ -15,6 +15,5 @@
             "name": "Thiago Alves"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {}
+    "minimum-stability": "dev"
 }

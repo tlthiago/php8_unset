@@ -11,6 +11,8 @@ define('SITE_DESCRICAO', 'UnSet - Tecnologia em Sistemas');
 define('URL_PRODUCAO', 'http://unset.com.br');
 define('URL_DESENVOLVIMENTO', 'http://localhost/meu_projeto');
 
+define('URL_SITE', 'meu_projeto/');
+
 /* Outra forma de definir constante
 const SITE_NOME = 'Unset';
 */

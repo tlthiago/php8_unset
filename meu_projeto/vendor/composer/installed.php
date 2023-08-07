@@ -3,7 +3,7 @@
         'name' => 'projeto/cursophp8',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '35bdab534ffec123a0df1cb6dd7b3bc866dd59fe',
+        'reference' => 'b445408ca848c60bf90bc9c17424f524018cf3f6',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -24,7 +24,7 @@
         'projeto/cursophp8' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '35bdab534ffec123a0df1cb6dd7b3bc866dd59fe',
+            'reference' => 'b445408ca848c60bf90bc9c17424f524018cf3f6',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -1,0 +1,20 @@
+{
+    "name": "projeto/cursophp8",
+    "description": "Curso de PHP 8",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "fundamentos\\": "fundamentos/"
+        },
+        "files": [
+            "fundamentos/configuracao.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Thiago Alves"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

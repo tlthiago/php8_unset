@@ -1,12 +1,7 @@
 <?php
 
-require_once './fundamentos/configuracao.php';
-include_once './fundamentos/Nucleo/Helpers.php';
-include './fundamentos/Nucleo/Mensagem.php';
-include './fundamentos/Nucleo/Controlador.php';
+require 'vendor/autoload.php';
 
-use fundamentos\Nucleo\Controlador;
+echo \fundamentos\Nucleo\Helpers::saudacao();
 
-$controlador = new Controlador();
-echo '<hr>';
-var_dump($controlador);
+echo SITE_NOME;

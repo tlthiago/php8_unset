@@ -1,5 +1,7 @@
 <?php
 
+namespace fundamentos\Nucleo;
+
 /**
  * Classe Mensagem - responsável por exibir as mensagens do sistema.
  * @author Thiago Alves
@@ -8,7 +10,7 @@ class Mensagem {
     private $texto;
     private $css;
 
-    
+
     public function __toString() {
         return $this->renderizar();
     }

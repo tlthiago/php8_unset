@@ -2,9 +2,11 @@
 
 <?php
 
+use fundamentos\Nucleo\Mensagem;
+
 include './Nucleo/Mensagem.php';
 
-echo (new Mensagem())->alerta('Texto de alerta');
+echo (new Mensagem)->alerta('Texto de alerta');
 
 // $msg = new Mensagem();
 // echo $msg->sucesso('Mensagem de sucesso')->renderizar();

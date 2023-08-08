@@ -3,6 +3,7 @@
 namespace fundamentos\Controllers;
 
 use fundamentos\Nucleo\Controlador;
+use fundamentos\Model\PostModel;
 
 class SiteController extends Controlador {
     public function __construct() {
@@ -10,9 +11,11 @@ class SiteController extends Controlador {
     }
 
     public function index(): void {
+        $posts = (new PostModel())->read();
+
         echo $this->template->render('index.html', [
             'title' => 'Home',
-            'subtitle' => 'Texto de subtitulo'
+            'posts' => $posts
         ]);
     }
 

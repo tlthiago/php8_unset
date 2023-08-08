@@ -5,9 +5,11 @@ use fundamentos\Nucleo\Connection;
 
 class PostModel 
 {
-    public function read(): array
+    public function read(int $id = null): array
     {
-        $query = "SELECT * FROM posts";
+        $where = ($id ? "WHERE id = {$id}" : '');
+
+        $query = "SELECT * FROM posts {$where}";
 
         // Statement
         $stmt = Connection::getInstance()->query($query);

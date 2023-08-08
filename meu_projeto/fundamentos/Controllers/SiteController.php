@@ -5,6 +5,7 @@ namespace fundamentos\Controllers;
 use fundamentos\Nucleo\Controlador;
 use fundamentos\Model\PostModel;
 use fundamentos\Nucleo\Helpers;
+use fundamentos\Model\CategoryModel;
 
 class SiteController extends Controlador {
     public function __construct() {
@@ -16,7 +17,8 @@ class SiteController extends Controlador {
 
         echo $this->template->render('index.html', [
             'title' => 'Home',
-            'posts' => $posts
+            'posts' => $posts,
+            'categories' => (new CategoryModel())->search()
         ]);
     }
 
@@ -28,7 +30,8 @@ class SiteController extends Controlador {
         
         echo $this->template->render('posts.html', [
             'title' => 'Posts',
-            'post' => $post
+            'post' => $post,
+            'categories' => (new CategoryModel())->search()
         ]);
     }
 

@@ -33,8 +33,8 @@ class Connection
             } catch (PDOException $e) {
                 die("Erro de conexão:: ".$e->getMessage());
             }
-            return self::$instance;
         }
+        return self::$instance;
     }
 
     protected function __construct()

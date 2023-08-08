@@ -3,6 +3,12 @@
 // Define o fuso horário
 date_default_timezone_set('America/Sao_Paulo');
 
+define('DB_HOST', 'localhost');
+define('DB_PORT', '3306');
+define('DB_NAME', 'mybd');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
+
 // Informações do sistema
 define('SITE_NOME', 'UnSet');
 define('SITE_DESCRICAO', 'UnSet - Tecnologia em Sistemas');

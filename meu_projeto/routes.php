@@ -8,6 +8,7 @@ try {
 
     SimpleRouter::get(URL_SITE, 'SiteController@index');
     SimpleRouter::get(URL_SITE.'sobre', 'SiteController@about');
+    SimpleRouter::get(URL_SITE.'post/{id}', 'SiteController@post');
     SimpleRouter::get(URL_SITE.'404', 'SiteController@error404');
 
     SimpleRouter::start();
